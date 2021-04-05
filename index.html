@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <link href="assets/dist/style.min.css?ver=0.0.1" rel="stylesheet" >
+
+    <title>Company</title>    
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="d-flex justify-content-between">
+          <div class="projectxy-logo">
+            <h1><a href="#">Project</a></h1>
+          </div>
+        </div>
+      </div>      
+    </header> 
+
+    <section class="section_services">
+      <div class="wrapper">
+        <h2 class="h2">OUR Services</h2>
+        <div class="our_services">
+          <div class="our_services-image">
+            <img src="assets/img/image.jpg" alt="">
+          </div>
+          <div class="our_services-detail">
+            <div class="our_services-row">
+              <div class="our_services-title">
+                <h3><span>UI/ UX</span></h3>
+              </div>
+              <div class="our_services-content">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore possimus tempora eveniet nesciunt velit sunt ea asperiores</p>
+              </div>
+            </div>
+            <div class="our_services-row">
+              <div class="our_services-title">
+                <h3><span>Front-End</span></h3>
+              </div>
+              <div class="our_services-content">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore possimus tempora eveniet nesciunt velit sunt ea asperiores</p>
+              </div>
+            </div>
+            <div class="our_services-row">
+              <div class="our_services-title">
+                <h3><span>Back-ends</span></h3>
+              </div>
+              <div class="our_services-content">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore possimus tempora eveniet nesciunt velit sunt ea asperiores</p>
+              </div>
+            </div>
+            <div class="our_services-row">
+              <div class="our_services-title">
+                <h3><span>Mobile app</span></h3>
+              </div>
+              <div class="our_services-content">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore possimus tempora eveniet nesciunt velit sunt ea asperiores</p>
+              </div>
+            </div>
+            <a href="javascript:void(0);" class="seeall">See all our services <span>&rarr;</span></a>
+          </div>
+        </div>
+
+      </div>    
+    </section>
+
+    <section class="section_slider" style="display: none;">
+      <div class="wrapper">
+        <div class="slider slider-for responsive lazy">
+          <div class="slider_item"><h2>Slide 1</h2></div>
+          <div class="slider_item"><h2>Slide 2</h2></div>
+          <div class="slider_item"><h2>Slide 3</h2></div>
+          <div class="slider_item"><h2>Slide 4</h2></div>
+          <div class="slider_item"><h2>Slide 5</h2></div>
+          <div class="slider_item"><h2>Slide 6</h2></div>
+          <div class="slider_item"><h2>Slide 7</h2></div>
+          <div class="slider_item"><h2>Slide 8</h2></div>
+          <div class="slider_item"><h2>Slide 9</h2></div>
+          <div class="slider_item"><h2>Slide 10</h2></div>
+        </div>
+        <div class="slider slider-nav">
+          <div class="slider_item"><h2><span>1</span></h2></div>
+          <div class="slider_item"><h2><span>2</span></h2></div>
+          <div class="slider_item"><h2><span>3</span></h2></div>
+          <div class="slider_item"><h2><span>4</span></h2></div>
+          <div class="slider_item"><h2><span>5</span></h2></div>
+          <div class="slider_item"><h2><span>6</span></h2></div>
+          <div class="slider_item"><h2><span>7</span></h2></div>
+          <div class="slider_item"><h2><span>8</span></h2></div>
+          <div class="slider_item"><h2><span>9</span></h2></div>
+          <div class="slider_item"><h2><span>10</span></h2></div>
+        </div>
+
+        <div class="slider-progress">
+          <div class="progress"></div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+
+    <footer class="footer">
+      <div class="wrapper">
+        
+      </div>
+    </footer>   
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script> -->
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.js"></script>
+
+    <script>
+      jQuery(document).ready(function() {
+        var time = 2;
+        var $bar,
+          $slick,
+          isPause,
+          tick,
+          percentTime;
+
+        const $rootSingle = $('.slider-for');
+        const $rootNav = $('.slider-nav');
+
+        $bar = $('.slider-progress .progress');
+
+        $rootSingle.slick({
+          slide: '.slider_item',
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          fade: false,
+          adaptiveHeight: true,
+          infinite: false,
+          useTransform: true,
+          speed: 400,
+          //autoplay: true,
+          //autoplaySpeed: 4000,
+          adaptiveHeight: false,
+          cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
+        });
+
+        $rootNav.on('init', function(event, slick) {
+            $(this).find('.slick-slide.slick-current').addClass('is-active');
+          })
+        .slick({
+          slide: '.slider_item',
+          slidesToShow: 7,
+          slidesToScroll: 7,
+          dots: false,
+          focusOnSelect: false,
+          infinite: false,
+          arrows: false,
+          responsive: [{
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 5,
+              slidesToScroll: 5,
+            }
+          }, {
+            breakpoint: 640,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 4,
+            }
+          }, {
+            breakpoint: 420,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+          }
+          }]
+        });
+
+        $rootSingle.on('afterChange', function(event, slick, currentSlide) {
+          $rootNav.slick('slickGoTo', currentSlide);
+          $rootNav.find('.slick-slide.is-active').removeClass('is-active');
+          $rootNav.find('.slick-slide[data-slick-index="' + currentSlide + '"]').addClass('is-active');
+        });
+
+        $rootNav.on('click', '.slick-slide', function(event) {
+          event.preventDefault();
+          var goToSingleSlide = $(this).data('slick-index');
+
+          $rootSingle.slick('slickGoTo', goToSingleSlide);
+        });
+
+        function startProgressbar() {
+    resetProgressbar();
+    percentTime = 0;
+    isPause = false;
+    tick = setInterval(interval, 30);
+  }
+
+  function interval() {
+    if (isPause === false) {
+      percentTime += 1 / (time + 0.1);
+      $bar.css({
+        width: percentTime + "%"
+      });
+      if (percentTime >= 100) {
+        $rootSingle.slick('slickNext');
+        startProgressbar();
+      }
+    }
+  }
+
+  function resetProgressbar() {
+    $bar.css({
+      width: 0 + '%'
+    });
+    clearTimeout(tick);
+  }
+
+  startProgressbar();
+        
+      });
+
+
+    </script>
+
+ 
+  </body>
+</html>

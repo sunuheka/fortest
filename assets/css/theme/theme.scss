@@ -1,0 +1,185 @@
+:root {
+	font-size: 16px;
+	line-height: 1.7;
+	color: $text-color;
+
+	@media all and ( max-width: 1024px ) {
+		font-size: 14px;
+	}
+
+	@media all and ( max-width: 767px ) {
+		font-size: 12px;
+	}
+}
+
+body {
+	font-size: 20px;
+	line-height: 1.6;
+	overflow-x: hidden;
+	font-family: $font-family-base;
+	background-image: url( '../img/bg-pattern.jpg' );
+	background-repeat: repeat;
+}
+
+.trs {
+	transition: all 0.3s linear;
+}
+
+img {
+	max-width: 100%;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1000px;
+}
+
+.js .slider-for > div:nth-child( 1n+2 ) {
+	display: none;
+}
+
+.js .slider-for.slick-initialized > div:nth-child( 1n+2 ) {
+	display: block;
+}
+
+.slider-for h2 {
+	line-height: 1;
+}
+
+.slider--nav h2:before {
+	content: "";
+	display: block;
+	padding-top: 75%;
+}
+
+.slick-slide.is-active h2 {
+	color: #c00;
+	background-color: #fff;
+}
+
+.cSlider--nav .slick-slide {
+	cursor: pointer;
+}
+
+.slider-nav span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate( -50%, -50% );
+}
+
+.section_services {
+	background-color: $white;
+	border-radius: 10px;
+	margin: 50px 20px;
+	padding-top: 1.875rem;
+	padding-bottom: 3.125rem;
+	box-shadow: 0 0 5px lighten( $black, 80% );
+
+	.h2 {
+		text-align: left;
+		text-transform: uppercase;
+		padding-bottom: 0;
+
+		@media all and ( min-width: 768px ) {
+			padding-left: 3.125rem;
+		}
+	}
+}
+
+//Our Services
+.our_services {
+	display: flex;
+
+	@media all and ( max-width: 767px ) {
+		flex-direction: column;
+	}
+
+	&-image {
+		@media all and ( min-width: 768px ) {
+			max-width: 40%;
+			flex: 0 0 40%;
+		}
+	}
+
+	&-detail {
+		@media all and ( min-width: 768px ) {
+			max-width: 60%;
+			flex: 0 0 60%;
+		}
+	}
+
+	&-row {
+		display: flex;
+		margin-bottom: 50px;
+
+		h3 {
+			text-transform: uppercase;
+
+			@media all and ( min-width: 768px ) {
+				padding-left: 3.125rem;
+			}
+
+			span {
+				display: inline-block;
+				padding: 5px 15px;
+
+				@extend .trs;
+			}
+		}
+
+		&:hover {
+			h3 {
+				span {
+					color: $white;
+					background-color: $pink;
+					box-shadow: 10px 10px 10px #ccc;
+				}
+			}
+
+			.our_services-content {
+				p {
+					color: lighten( $black, 70% );
+				}
+			}
+		}
+	}
+
+	&-title {
+		flex: 1;
+	}
+
+	&-content {
+		flex: 1;
+
+		p {
+			font-size: 12px;
+			color: lighten( $black, 80% );
+			max-width: 200px;
+		}
+	}
+}
+
+.seeall {
+	font-size: 11px;
+	color: $pink;
+	text-decoration: none;
+
+	@extend .trs;
+
+	@media all and ( min-width: 768px ) {
+		padding-left: calc( 3.125rem + 15px );
+	}
+
+	span {
+		display: inline-block;
+		font-size: 16px;
+		transform: translateX( 0 );
+	}
+
+	&:hover {
+		span {
+			transform: translateX( 5px );
+		}
+	}
+}
