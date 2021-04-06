@@ -34,6 +34,18 @@ img {
 	max-width: 1000px;
 }
 
+.section_slider {
+	h2 {
+		position: relative;
+		font-size: 2.25rem;
+		background-color: #f0f0f0;
+		color: #3498db;
+		text-align: center;
+		padding: 2%;
+		margin: 0.5rem;
+	}
+}
+
 .js .slider-for > div:nth-child( 1n+2 ) {
 	display: none;
 }
@@ -44,9 +56,10 @@ img {
 
 .slider-for h2 {
 	line-height: 1;
+	height: 300px;
 }
 
-.slider--nav h2:before {
+.slider-nav h2:before {
 	content: "";
 	display: block;
 	padding-top: 75%;
@@ -57,8 +70,9 @@ img {
 	background-color: #fff;
 }
 
-.cSlider--nav .slick-slide {
+.slider-nav .slick-slide {
 	cursor: pointer;
+	position: relative;
 }
 
 .slider-nav span {

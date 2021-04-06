@@ -29,7 +29,7 @@
       </div>      
     </header> 
 
-    <section class="section_services">
+    <section class="section_services" style="display: none;">
       <div class="wrapper">
         <h2 class="h2">OUR Services</h2>
         <div class="our_services">
@@ -118,8 +118,7 @@
 
 
     <footer class="footer">
-      <div class="wrapper">
-        
+      <div class="wrapper">        
       </div>
     </footer>   
 
@@ -206,7 +205,7 @@
           $rootSingle.slick('slickGoTo', goToSingleSlide);
         });
 
-        function startProgressbar() {
+              function startProgressbar() {
     resetProgressbar();
     percentTime = 0;
     isPause = false;
@@ -234,6 +233,8 @@
   }
 
   startProgressbar();
+
+  
 
   // var swiper = new Swiper('.swiper-container', {
   //   direction: 'vertical',
