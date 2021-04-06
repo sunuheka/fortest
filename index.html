@@ -8,9 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
     <link href="assets/dist/style.min.css?ver=0.0.1" rel="stylesheet" >
@@ -31,10 +29,10 @@
 
     <section class="section_services">
       <div class="wrapper">
-        <h2 class="h2">OUR Services</h2>
+        <h2 class="h2">OUR Services</div>
         <div class="our_services">
           <div class="our_services-image">
-            <img src="assets/img/image.jpg" alt="">
+            <img src="assets/img/image5.jpg" alt="">
           </div>
           <div class="our_services-detail">
             <div class="our_services-row">
@@ -83,30 +81,52 @@
     </section>
 
     <section class="section_slider">
-      <div class="wrapper">
+      <div class="wrapper por">
         <div class="slider slider-for responsive lazy">
-          <div class="slider_item"><h2>Slide 1</h2></div>
-          <div class="slider_item"><h2>Slide 2</h2></div>
-          <div class="slider_item"><h2>Slide 3</h2></div>
-          <div class="slider_item"><h2>Slide 4</h2></div>
-          <div class="slider_item"><h2>Slide 5</h2></div>
-          <div class="slider_item"><h2>Slide 6</h2></div>
-          <div class="slider_item"><h2>Slide 7</h2></div>
-          <div class="slider_item"><h2>Slide 8</h2></div>
-          <div class="slider_item"><h2>Slide 9</h2></div>
-          <div class="slider_item"><h2>Slide 10</h2></div>
+          <div class="slider_item">
+            <div class="slider-content">
+            <div class="image_wrapper">
+              <img src="assets/img/image.jpg" alt="">
+            </div></div>
+          </div>
+          <div class="slider_item">
+            <div class="slider-content">
+            <div class="image_wrapper">
+              <img src="assets/img/image1.jpg" alt="">
+            </div></div>
+          </div>
+          <div class="slider_item">
+            <div class="slider-content">
+            <div class="image_wrapper">
+              <img src="assets/img/image2.jpg" alt="">
+            </div></div>
+          </div>
+          <div class="slider_item">
+            <div class="slider-content">
+            <div class="image_wrapper">
+              <img src="assets/img/image3.jpg" alt="">
+            </div></div>
+          </div>
+          <div class="slider_item">
+            <div class="slider-content">
+            <div class="image_wrapper">
+              <img src="assets/img/image4.jpg" alt="">
+            </div></div>
+          </div>
+          <div class="slider_item">
+            <div class="slider-content">
+            <div class="image_wrapper">
+              <img src="assets/img/image1.jpg" alt="">
+            </div></div>
+          </div>
         </div>
         <div class="slider slider-nav">
-          <div class="slider_item"><h2><span>1</span></h2></div>
-          <div class="slider_item"><h2><span>2</span></h2></div>
-          <div class="slider_item"><h2><span>3</span></h2></div>
-          <div class="slider_item"><h2><span>4</span></h2></div>
-          <div class="slider_item"><h2><span>5</span></h2></div>
-          <div class="slider_item"><h2><span>6</span></h2></div>
-          <div class="slider_item"><h2><span>7</span></h2></div>
-          <div class="slider_item"><h2><span>8</span></h2></div>
-          <div class="slider_item"><h2><span>9</span></h2></div>
-          <div class="slider_item"><h2><span>10</span></h2></div>
+          <div class="slider_item"><div class="slider-content"><span>1</span></div></div>
+          <div class="slider_item"><div class="slider-content"><span>2</span></div></div>
+          <div class="slider_item"><div class="slider-content"><span>3</span></div></div>
+          <div class="slider_item"><div class="slider-content"><span>4</span></div></div>
+          <div class="slider_item"><div class="slider-content"><span>5</span></div></div>
+          <div class="slider_item"><div class="slider-content"><span>6</span></div></div>
         </div>
 
         <div class="slider-progress">
@@ -140,19 +160,19 @@
           tick,
           percentTime;
 
-        const $rootSingle = $('.slider-for');
-        const $rootNav = $('.slider-nav');
+        const $slideSingle = $('.slider-for');
+        const $slideNav = $('.slider-nav');
 
         $bar = $('.slider-progress .progress');
 
-        $rootSingle.slick({
+        $slideSingle.slick({
           slide: '.slider_item',
           slidesToShow: 1,
           slidesToScroll: 1,
           arrows: false,
           fade: false,
           adaptiveHeight: true,
-          infinite: false,
+          infinite: true,
           useTransform: true,
           speed: 400,
           //autoplay: true,
@@ -161,7 +181,7 @@
           cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
         });
 
-        $rootNav.on('init', function(event, slick) {
+        $slideNav.on('init', function(event, slick) {
             $(this).find('.slick-slide.slick-current').addClass('is-active');
           })
         .slick({
@@ -193,25 +213,25 @@
           }]
         });
 
-        $rootSingle.on('afterChange', function(event, slick, currentSlide) {
-          $rootNav.slick('slickGoTo', currentSlide);
-          $rootNav.find('.slick-slide.is-active').removeClass('is-active');
-          $rootNav.find('.slick-slide[data-slick-index="' + currentSlide + '"]').addClass('is-active');
+        $slideSingle.on('afterChange', function(event, slick, currentSlide) {
+          $slideNav.slick('slickGoTo', currentSlide);
+          $slideNav.find('.slick-slide.is-active').removeClass('is-active');
+          $slideNav.find('.slick-slide[data-slick-index="' + currentSlide + '"]').addClass('is-active');
         });
 
-        $rootNav.on('click', '.slick-slide', function(event) {
+        $slideNav.on('click', '.slick-slide', function(event) {
           event.preventDefault();
           var goToSingleSlide = $(this).data('slick-index');
 
-          $rootSingle.slick('slickGoTo', goToSingleSlide);
+          $slideSingle.slick('slickGoTo', goToSingleSlide);
         });
 
         function startProgressbar() {
-    resetProgressbar();
-    percentTime = 0;
-    isPause = false;
-    tick = setInterval(interval, 30);
-  }
+          resetProgressbar();
+          percentTime = 0;
+          isPause = false;
+          tick = setInterval(interval, 30);
+        }
 
   function interval() {
     if (isPause === false) {
@@ -220,7 +240,7 @@
         width: percentTime + "%"
       });
       if (percentTime >= 100) {
-        $rootSingle.slick('slickNext');
+        $slideSingle.slick('slickNext');
         startProgressbar();
       }
     }
@@ -234,6 +254,10 @@
   }
 
   startProgressbar();
+
+  $('.slider-nav .slider-content').click(function() {
+    startProgressbar();
+  });
 
   // var swiper = new Swiper('.swiper-container', {
   //   direction: 'vertical',

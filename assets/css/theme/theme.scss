@@ -34,30 +34,41 @@ img {
 	max-width: 1000px;
 }
 
-.js .slider-for > div:nth-child( 1n+2 ) {
-	display: none;
+.por {
+	position: relative;
 }
 
-.js .slider-for.slick-initialized > div:nth-child( 1n+2 ) {
-	display: block;
+// .js .slider-for > div:nth-child( 1n+2 ) {
+// 	display: none;
+// }
+
+// .js .slider-for.slick-initialized > div:nth-child( 1n+2 ) {
+// 	display: block;
+// }
+
+.section_slider {
+	.slider-content {
+		position: relative;
+		font-size: 2.25rem;
+		background-color: #161616;
+		color: $white;
+		text-align: center;
+		margin: 0.5rem;
+	}
 }
 
-.slider-for h2 {
-	line-height: 1;
-}
-
-.slider--nav h2:before {
+.slider-nav .slider-content:before {
 	content: "";
 	display: block;
 	padding-top: 75%;
 }
 
-.slick-slide.is-active h2 {
-	color: #c00;
+.slick-slide.is-active .slider-content {
+	color: $yellow;
 	background-color: #fff;
 }
 
-.cSlider--nav .slick-slide {
+.slider-nav .slick-slide {
 	cursor: pointer;
 }
 
@@ -66,6 +77,15 @@ img {
 	top: 50%;
 	left: 50%;
 	transform: translate( -50%, -50% );
+}
+
+.image_wrapper {
+	height: 500px;
+	overflow: hidden;
+
+	img {
+		width: 100%;
+	}
 }
 
 .section_services {
@@ -86,6 +106,21 @@ img {
 			padding-left: 3.125rem;
 		}
 	}
+}
+
+/* progress bar */
+.slider-progress {
+	width: 100%;
+	height: 10px;
+	background: #5c5c5c;
+	position: absolute;
+	bottom: 0;
+}
+
+.slider-progress .progress {
+	width: 0%;
+	height: 10px;
+	background: $yellow;
 }
 
 //Our Services
