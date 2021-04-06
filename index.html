@@ -27,61 +27,9 @@
       </div>      
     </header> 
 
-    <section class="section_services">
-      <div class="wrapper">
-        <h2 class="h2">OUR Services</div>
-        <div class="our_services">
-          <div class="our_services-image">
-            <img src="assets/img/image5.jpg" alt="">
-          </div>
-          <div class="our_services-detail">
-            <div class="our_services-row">
-              <div class="our_services-title">
-                <h3><span>UI/ UX</span></h3>
-              </div>
-              <div class="our_services-content">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore possimus tempora eveniet nesciunt velit sunt ea asperiores</p>
-              </div>
-            </div>
-            <div class="our_services-row">
-              <div class="our_services-title">
-                <h3><span>Front-End</span></h3>
-              </div>
-              <div class="our_services-content">
-                <div class="swiper-container">
-                <div class="swiper-wrapper">
-                <p class="swiper-slide">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore possimus tempora eveniet nesciunt velit sunt ea asperiores Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore possimus tempora eveniet nesciunt velit sunt ea asperiores</p>
-                </div>
-                <!-- Add Scroll Bar -->
-                <div class="swiper-scrollbar"></div>
-              </div>
-              </div>
-            </div>
-            <div class="our_services-row">
-              <div class="our_services-title">
-                <h3><span>Back-ends</span></h3>
-              </div>
-              <div class="our_services-content">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore possimus tempora eveniet nesciunt velit sunt ea asperiores</p>
-              </div>
-            </div>
-            <div class="our_services-row">
-              <div class="our_services-title">
-                <h3><span>Mobile app</span></h3>
-              </div>
-              <div class="our_services-content">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore possimus tempora eveniet nesciunt velit sunt ea asperiores</p>
-              </div>
-            </div>
-            <a href="javascript:void(0);" class="seeall">See all our services <span>&rarr;</span></a>
-          </div>
-        </div>
-
-      </div>    
-    </section>
-
     <section class="section_slider">
-      <div class="wrapper por">
+      <h2 class="h2">OUR Products</h2>
+      <div class="slider_wrapper por">
         <div class="slider slider-for responsive lazy">
           <div class="slider_item">
             <div class="slider-content">
@@ -136,6 +84,58 @@
       </div>
     </section>
 
+    <section class="section_services">
+      <div class="wrapper">
+        <h2 class="h2">OUR Services</div>
+        <div class="our_services">
+          <div class="our_services-image">
+            <img src="assets/img/image5.jpg" alt="">
+          </div>
+          <div class="our_services-detail">
+            <div class="our_services-row">
+              <div class="our_services-title">
+                <h3><span>UI/ UX</span></h3>
+              </div>
+              <div class="our_services-content">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore possimus tempora eveniet nesciunt velit sunt ea asperiores</p>
+              </div>
+            </div>
+            <div class="our_services-row">
+              <div class="our_services-title">
+                <h3><span>Front-End</span></h3>
+              </div>
+              <div class="our_services-content">
+                <div class="swiper-container">
+                <div class="swiper-wrapper">
+                <p class="swiper-slide">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore possimus tempora eveniet nesciunt velit sunt ea asperiores Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore possimus tempora eveniet nesciunt velit sunt ea asperiores</p>
+                </div>
+                <!-- Add Scroll Bar -->
+                <div class="swiper-scrollbar"></div>
+              </div>
+              </div>
+            </div>
+            <div class="our_services-row">
+              <div class="our_services-title">
+                <h3><span>Back-ends</span></h3>
+              </div>
+              <div class="our_services-content">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore possimus tempora eveniet nesciunt velit sunt ea asperiores</p>
+              </div>
+            </div>
+            <div class="our_services-row">
+              <div class="our_services-title">
+                <h3><span>Mobile app</span></h3>
+              </div>
+              <div class="our_services-content">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore possimus tempora eveniet nesciunt velit sunt ea asperiores</p>
+              </div>
+            </div>
+            <a href="javascript:void(0);" class="seeall">See all our services <span>&rarr;</span></a>
+          </div>
+        </div>
+
+      </div>    
+    </section>
 
     <footer class="footer">
       <div class="wrapper">
@@ -144,9 +144,8 @@
     </footer>   
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script> -->
 
-    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.js"></script>
@@ -259,15 +258,15 @@
     startProgressbar();
   });
 
-  // var swiper = new Swiper('.swiper-container', {
-  //   direction: 'vertical',
-  //   slidesPerView: 'auto',
-  //   freeMode: true,
-  //   scrollbar: {
-  //     el: '.swiper-scrollbar',
-  //   },
-  //   mousewheel: true,
-  // });
+  var swiper = new Swiper('.swiper-container', {
+    direction: 'vertical',
+    slidesPerView: 'auto',
+    freeMode: true,
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+    mousewheel: true,
+  });
         
       });
 
