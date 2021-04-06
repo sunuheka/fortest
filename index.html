@@ -35,37 +35,43 @@
             <div class="slider-content">
             <div class="image_wrapper">
               <img src="assets/img/image.jpg" alt="">
-            </div></div>
+            </div>            
+          </div>
           </div>
           <div class="slider_item">
             <div class="slider-content">
             <div class="image_wrapper">
               <img src="assets/img/image1.jpg" alt="">
-            </div></div>
+            </div>            
+          </div>
           </div>
           <div class="slider_item">
             <div class="slider-content">
             <div class="image_wrapper">
               <img src="assets/img/image2.jpg" alt="">
-            </div></div>
+            </div>            
+          </div>
           </div>
           <div class="slider_item">
             <div class="slider-content">
             <div class="image_wrapper">
               <img src="assets/img/image3.jpg" alt="">
-            </div></div>
+            </div>            
+          </div>
           </div>
           <div class="slider_item">
             <div class="slider-content">
             <div class="image_wrapper">
               <img src="assets/img/image4.jpg" alt="">
-            </div></div>
+            </div>            
+          </div>
           </div>
           <div class="slider_item">
             <div class="slider-content">
             <div class="image_wrapper">
               <img src="assets/img/image1.jpg" alt="">
-            </div></div>
+            </div>            
+          </div>
           </div>
         </div>
         <div class="slider slider-nav">
@@ -75,6 +81,38 @@
           <div class="slider_item"><div class="slider-content"><span>4</span></div></div>
           <div class="slider_item"><div class="slider-content"><span>5</span></div></div>
           <div class="slider_item"><div class="slider-content"><span>6</span></div></div>
+        </div>
+        <div class="slider slider-text">
+          <div class="slider_item">
+            <div class="slider-content">
+              <p>1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, natus corporis. Ab tempore cupiditate, asperiores quisquam tempora laudantium eius, commodi dolore earum in et voluptas, velit amet. Laboriosam, accusantium qui!</p>
+            </div>
+          </div>
+          <div class="slider_item">
+            <div class="slider-content">
+              <p>2 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, natus corporis. Ab tempore cupiditate, asperiores quisquam tempora laudantium eius, commodi dolore earum in et voluptas, velit amet. Laboriosam, accusantium qui!</p>
+            </div>
+          </div>
+          <div class="slider_item">
+            <div class="slider-content">
+              <p>3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, natus corporis. Ab tempore cupiditate, asperiores quisquam tempora laudantium eius, commodi dolore earum in et voluptas, velit amet. Laboriosam, accusantium qui!</p>
+            </div>
+          </div>
+          <div class="slider_item">
+            <div class="slider-content">
+              <p>4 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, natus corporis. Ab tempore cupiditate, asperiores quisquam tempora laudantium eius, commodi dolore earum in et voluptas, velit amet. Laboriosam, accusantium qui!</p>
+            </div>
+          </div>
+          <div class="slider_item">
+            <div class="slider-content">
+              <p>5 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, natus corporis. Ab tempore cupiditate, asperiores quisquam tempora laudantium eius, commodi dolore earum in et voluptas, velit amet. Laboriosam, accusantium qui!</p>
+            </div>
+          </div>
+          <div class="slider_item">
+            <div class="slider-content">
+              <p>6 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, natus corporis. Ab tempore cupiditate, asperiores quisquam tempora laudantium eius, commodi dolore earum in et voluptas, velit amet. Laboriosam, accusantium qui!</p>
+            </div>
+          </div>
         </div>
 
         <div class="slider-progress">
@@ -161,6 +199,7 @@
 
         const $slideSingle = $('.slider-for');
         const $slideNav = $('.slider-nav');
+        const $slideText = $('.slider-text');
 
         $bar = $('.slider-progress .progress');
 
@@ -182,8 +221,9 @@
 
         $slideNav.on('init', function(event, slick) {
             $(this).find('.slick-slide.slick-current').addClass('is-active');
-          })
-        .slick({
+        })
+
+        $slideNav.slick({
           slide: '.slider_item',
           slidesToShow: 7,
           slidesToScroll: 7,
@@ -210,9 +250,31 @@
               slidesToScroll: 3,
           }
           }]
+        });       
+
+        $slideText.slick({
+          slide: '.slider_item',
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          fade: false,
+          adaptiveHeight: true,
+          infinite: true,
+          useTransform: true,
+          speed: 400,
+          //autoplay: true,
+          //autoplaySpeed: 4000,
+          adaptiveHeight: false,
+          cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
+        });
+        
+        $slideSingle.on('afterChange', function(event, slick, currentSlide) {
+          $slideNav.slick('slickGoTo', currentSlide);
+          $slideNav.find('.slick-slide.is-active').removeClass('is-active');
+          $slideNav.find('.slick-slide[data-slick-index="' + currentSlide + '"]').addClass('is-active');
         });
 
-        $slideSingle.on('afterChange', function(event, slick, currentSlide) {
+        $slideText.on('afterChange', function(event, slick, currentSlide) {
           $slideNav.slick('slickGoTo', currentSlide);
           $slideNav.find('.slick-slide.is-active').removeClass('is-active');
           $slideNav.find('.slick-slide[data-slick-index="' + currentSlide + '"]').addClass('is-active');
@@ -223,7 +285,8 @@
           var goToSingleSlide = $(this).data('slick-index');
 
           $slideSingle.slick('slickGoTo', goToSingleSlide);
-        });
+          $slideText.slick('slickGoTo', goToSingleSlide);
+        });       
 
         function startProgressbar() {
           resetProgressbar();
@@ -240,6 +303,7 @@
       });
       if (percentTime >= 100) {
         $slideSingle.slick('slickNext');
+        $slideText.slick('slickNext');
         startProgressbar();
       }
     }
