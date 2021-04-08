@@ -34,39 +34,49 @@ img {
 	max-width: 1000px;
 }
 
+.por {
+	position: relative;
+}
+
 .section_slider {
-	h2 {
+	background-color: #161616;
+	padding-top: 30px;
+	margin-top: 40px;
+
+	.slider-content {
 		position: relative;
 		font-size: 2.25rem;
-		background-color: #f0f0f0;
-		color: #3498db;
+		color: $white;
 		text-align: center;
-		padding: 2%;
 		margin: 0.5rem;
+	}
+
+	h2 {
+		color: $white;
+		padding-left: 20px;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+
+		@media all and ( min-width: 768px ) {
+			padding-left: 3.125rem;
+		}
 	}
 }
 
-.js .slider-for > div:nth-child( 1n+2 ) {
-	display: none;
+.slider-text {
+	p {
+		font-size: 12px;
+	}
 }
 
-.js .slider-for.slick-initialized > div:nth-child( 1n+2 ) {
-	display: block;
-}
-
-.slider-for h2 {
-	line-height: 1;
-	height: 300px;
-}
-
-.slider-nav h2:before {
+.slider-nav .slider-content:before {
 	content: "";
 	display: block;
-	padding-top: 75%;
+	padding-top: 50px;
 }
 
-.slick-slide.is-active h2 {
-	color: #c00;
+.slick-slide.is-active .slider-content {
+	color: $yellow;
 	background-color: #fff;
 }
 
@@ -80,6 +90,15 @@ img {
 	top: 50%;
 	left: 50%;
 	transform: translate( -50%, -50% );
+}
+
+.image_wrapper {
+	height: 500px;
+	overflow: hidden;
+
+	img {
+		width: 100%;
+	}
 }
 
 .section_services {
@@ -100,6 +119,21 @@ img {
 			padding-left: 3.125rem;
 		}
 	}
+}
+
+/* progress bar */
+.slider-progress {
+	width: 100%;
+	height: 10px;
+	background: #5c5c5c;
+	position: absolute;
+	bottom: 0;
+}
+
+.slider-progress .progress {
+	width: 0%;
+	height: 10px;
+	background: $yellow;
 }
 
 //Our Services
